@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+ div {
+    text-align: center;
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+main.container {
+    
+    display: flex;
+    flex-direction: row;
+    /* shorthand = flex-flow:row wrap */
+    /* row, row-reverse, column, column-reverse.
+    BASICAMENTE O REVERSE INVERTE O SENTIDO QUE COMEÇA.
+    SE COMEÇA DO FINAL OU DO INICIO */
+    justify-content: center;
+    /* BASICAMENTE DETERMINA ONDE O CONTEÚDO SERÁ AGRUPADO;
+    "flex-start" = no começo
+    "flex-end" = no final
+    "center" = no meio
+    "space-between" = distribui os elementos uniformemente na viewport da pagina 
+    "space-around" = distribui os elementos uniformemente, porém possui margem externa.*/
+    height: 500px;
+    width: 90vw;
+    align-items: center;
+    /* SERVE PARA ALINHAR OS OBJETOS QUE ESTÃO DENTRO DO CONTAINER ATUAL NO SENTIDO PERPENDICULAR AO "flex-direction", ou seja:
+
+    flex-diretion: row; (linha)
+    Sentido perpendicular: column (coluna)
+    
+    (vale lembrar "height" e "width" devem estar definidos!)
+    
+    flex-start = alinhados no inicio
+    flex-end= alinhados no final
+    center= alinhados no meio
+    stretch= faz os elementos ocupar toda a extensão em um sentido perpendicular (LEMBRE - SE QUE SO VALE SE OS ELEMENTOS NÃO POSSUÍREM UM "height" PRÉ-DEFINIDO
+    baseline= alinha o conteúdo dentro da sessão na base dele.(isso ajuda quando por exemplo em um "main" tem 3 "div" com "font-size" diferentes)
+    */
+    flex-wrap: nowrap;
+    /* shorthand = flex-flow: row wrap */
+    /* É BASICAMENTE UM BRAKE ROW <br>*/
+    align-content: center;
+    /* É O ALINHAMENTO DO TEXTO
+    flex-start = alinhar em cima
+    flex-end = alinhar no final
+    center = alinhar no meio
+    space-between = distribui uniformemente pelo sentido perpendicular
+    space-around = da uma margem entre os elementos e externamente*/
+    gap: 10px 10px;
+    /* um espaço entre os elementos tanto no eixo vertical quanto no horizontal 
+    
+    caso possua dois valores o primeiro definira "row" e o segundo "column"
+
+    ou voce pode definir:
+
+    row-gap: 
+    column-gap: 
+
+    */
+}
+
+/* "order" INDICA A ORDEM DOS ELEMENTOS FILHOS, mais de um elemento pode ter o mesmo numero (order) , tipo = 0,0,1 - Neste caso o que vale é a ordem do HTML.
+E ELES TAMBÉM PODE SER NEGATIVOS
+tipo = 0 , 1 , -1 */
+
+.bloco-1{
+    order: 1;
+    flex-grow: 0;
+    /* A DIFERENÇA DE FLEX GROW É O FLEX GROW ANTERIOR + 50% 
+    EXEMPLOS =
+    flex-grow: 1 = 300px
+    flex-grow: 2 = 450px (300 + (50% -> 300 = 150))*/
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-start;
+    /* permite alterar um elemento especificadamente */
+    background-color: aqua;
+}
+
+
+.bloco-2{
+    order: 1;
+    /* flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto; */
+    flex: 0 1 auto;
+    align-self: flex-end;
+    background-color: lightcoral;
+}
+
+.bloco-3{
+    /* flex-grow: 0;
+    flex-shrink: 4;
+    flex-basis: auto; */
+    flex: 0 4 auto;
+    order: 1;
+    background-color: blueviolet;
+}
+
