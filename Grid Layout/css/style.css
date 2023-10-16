@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    border: 2px solid red;
+    max-width: 3000px;
+    margin: 0 auto;
+}
+
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, auto)); 
+    o auto-fit é como se fosse um "wrap"
+    grid-template-rows: 1fr 2fr 1fr; */
+    gap: 20px;
+    grid-template-columns: repeat(3, 200px);
+    height: 800px;
+    justify-content: space-between;
+    /* 
+
+    se no "grid-template-columns ou rows" voce colocar um 'auto' isso deixara a caixa com o tamanho que o conteudo dentro dela tiver
+
+    column-gap: 20px;
+    row-gap: 20px; 
+    */
+    /* 
+    a tag "grid" pode ser usada como shorthand, ex:
+    grid: 200px 100px / 1fr 1fr 1fr    
+    EXEMPLOS DE GRID COLUMNS
+
+    COLUMNS ou ROWS:
+    grid-template-columns: 2fr 2fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-template-columns: minmax(500px, 2fr) 1fr; minimo=500px maximo= 2fr
+
+    */
+    /* fr = uma fração da % to tamanho do "width" 
+    ex = 1fr 1fr = 50% 50%
+    3fr 1fr = 75% 25%
+    
+    shorthand : repeat: ( nº de vezes que voce quer que o fr repitas, (xfr) )*/
+    
+}
+
+.grid-item {
+    background: rgb(0 0 255 / 14%);
+    border: solid 2px blue;
+}

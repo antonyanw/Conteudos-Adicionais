@@ -23,10 +23,16 @@ main.container {
     "flex-end" = no final
     "center" = no meio
     "space-between" = distribui os elementos uniformemente na viewport da pagina 
-    "space-around" = distribui os elementos uniformemente, porém possui margem externa.*/
+    "space-around" = distribui os elementos uniformemente, porém possui margem externa.
+    "space-evenly" = é bem parecido com o space around, mas com o dobro de margem externa*/
     height: 500px;
     width: 90vw;
     align-items: center;
+    /* 
+    justify-items: center; 
+    segue a mesma logica abaixo
+    */
+
     /* SERVE PARA ALINHAR OS OBJETOS QUE ESTÃO DENTRO DO CONTAINER ATUAL NO SENTIDO PERPENDICULAR AO "flex-direction", ou seja:
 
     flex-diretion: row; (linha)
