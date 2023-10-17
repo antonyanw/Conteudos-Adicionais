@@ -94,7 +94,7 @@ tipo = 0 , 1 , -1 */
     flex-shrink: 1;
     flex-basis: auto; */
     flex: 0 1 auto;
-    align-self: flex-end;
+    align-self: center;
     background-color: lightcoral;
 }
 
