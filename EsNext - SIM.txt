@@ -1,0 +1,18 @@
+EsNext - SIM
+Ajax - Nao
+Gulp -  Talvez
+Webpack - Obrig.
+jQuery - Nao
+Bootstrap - Tem melhores(Material UI/MUI)
+VueJS - é igual ao react (estudar qual voce quer )
+Angular 9 - é igual ao react (estudar qual vc quer )
+Express - Sim (outra opção Fastify)
+
+
+EMEA Script - é JAVASCRIPT
+PHP -  para ter estabilidade
+MySQL - OBRIGATORIO
+API - Obrigatorio 
+SASS - interessante, mas fds
+IONIC - para desktop
+WordPress - 
