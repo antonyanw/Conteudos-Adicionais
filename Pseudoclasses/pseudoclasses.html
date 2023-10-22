@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class</title>
+    <style>
+        
+        body {
+            background-color: wheat;
+        }
+
+        button {
+            padding: 10px 50px;
+            background-color: white;
+        }
+
+        .btnHover:hover {
+            background-color: green;
+            color: white;
+        }
+
+       
+        .btnActive:active {
+            background-color: gray;
+            color: white;
+        }
+
+        .btnDisabled:disabled {
+            opacity: 0.7;
+        }
+        
+        .btnEmpty:empty {
+            background-color: aquamarine;
+        }
+
+        .firstOftype p:first-of-type {
+            color: brown;
+            font-size: 20px;
+        }
+
+        .lastOftype p:last-of-type {
+            color: rgb(74, 105, 28);
+            font-size: 20px;
+        }
+
+        #inputFocus:focus {
+            background-color: aqua;
+        }
+
+    
+        .btnNot:not(.dois){
+            background-color: aquamarine;
+        }
+        
+        #checkbox:checked {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Pseudo-classes CSS
+    </h1>
+    <hr>
+    <h2>
+        1 - Hover
+    </h2>
+    <button class="btnHover">
+        Botão
+    </button>
+    <hr>
+    <h2>
+        2 - Active 
+        <!-- quando voce clica -->
+    </h2>
+    <button class="btnActive">
+        Botão
+    </button>
+    <hr>
+    <h2>
+        3 - Disabled
+    </h2>
+    <button class="btnDisabled" disabled>
+        Botão
+    </button>
+    <hr>
+    <h2>
+        4 - Empty
+    </h2>
+    <button class="btnEmpty">
+        Botão
+    </button> <br>
+    <button class="btnEmpty"><!-- ESTA CAIXA TEM QUE ESTAR VAZIA ( ZERO ESPAÇOS ) --></button> <br>
+    <button class="btnEmpty">
+        Botão
+    </button> 
+    <hr>
+    <h2>
+        5 - First of Type
+    </h2>
+    <div class="firstOftype">
+        <p>Paragrafo de Teste 1</p>
+        <p>Paragrafo de Teste 2</p>
+        <p>Paragrafo de Teste 3</p>
+    </div>
+    <hr>
+    <h2>
+        6 - Last of Type
+    </h2>
+    <div class="lastOftype">
+        <p>Paragrafo de Teste 1</p>
+        <p>Paragrafo de Teste 2</p>
+        <p>Paragrafo de Teste 3</p>
+    </div>
+    <hr>
+    <h2>
+        7 - Focus <!--- SERVE PARA INPUTS NORMALMENTE -->
+    </h2>
+    <input type="text" name="focus" id="inputFocus">
+    <hr>
+    <h2>
+        8 - Not
+    </h2>
+    <button class="btnNot">Botão</button>
+    <button class="btnNot dois">Botão</button>
+    <button class="btnNot">Botão</button>
+    
+    <hr>
+
+    <h2>
+        9 - Checked
+    </h2>
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <input type="checkbox" name="checkbox" id="checkbox">
+</body>
+</html>
