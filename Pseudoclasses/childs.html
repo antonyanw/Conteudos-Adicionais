@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Childs</title>
+    <style>
+        body {
+            font-size: 2em;
+            font-family: sans-serif;
+        }
+
+        div {
+            padding: 1em;
+            background-color: whitesmoke;
+        }
+
+         p:nth-child(2) {
+            /* neste caso o child é o "p" e o pai é o "div" */
+             color: red; 
+         } 
+
+        h1:first-child {
+            color: brown;
+        }
+        p.destaque:nth-of-type(3) {
+            color: purple;
+        }  
+
+        p:nth-child(4n - 2) {
+
+/* o N significa os numeros que são multiplos de "2" tipo 0,2,4,6 . e os numeros que vão o "-" Não é obrigatorio.*/
+
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            Título
+        </h1>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p class="destaque">
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+        <p>
+            amor
+        </p>
+    </div>
+</body>
+</html>

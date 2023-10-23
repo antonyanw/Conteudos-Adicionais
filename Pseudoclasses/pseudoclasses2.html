@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:has() :is() :where()</title>
+
+    <style>
+
+        :root {
+            --bg:white;
+            --cor:black;
+        }
+
+        :root:has(:checked) {
+            --bg:black;
+            --cor:white;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--cor);
+            font-family: sans-serif;
+            padding: 1rem;
+            width: 90%;
+            margin: auto;
+            font-size: 1.2em;
+        }
+/*   -------------- HAS -----------------
+
+BASICAMENTE ":has" SIGNIFICA "tem", E LOGO EM SEGUIDA VEM COM UM PARENTESES PARA A TAG SER COLOCADA DENTRO.
+
+EXEMPLO:
+
+div:has(p) {
+    color: blue;
+}
+
+TRADUZINDO ISSO NO SENTIDO LITERAL SERIA:
+
+a "div" que tenha(has) um parágrafo (p) dentro  dela, terá as seguintes configurações: color: blue;
+
+------------------------------------------
+
+-------------------- IS ------------------
+            
+BASICAMENTE ":is" SIGNIFICA "é",  E LOGO EM SEGUIDA VEM COM UM PARENTESES PARA A TAG SER COLOCADA DENTRO.
+
+EXEMPLO:
+
+:is(section.is) a {
+    color: purple;
+}
+
+TRADUZINDO ISSO NO SENTIDO LITERAL SERIA:
+
+":is" ou "é" da class=is (section.is) terá todos os links "a" com as seguintes configurações: color: purple;
+
+------------------------------------------
+
+------------------- WHERE ----------------
+
+É BASICAMENTE A MESMA COISA DO "is", A ÚNICA DIFERENÇA ENTRE ELES É QUE O "is" TEM MAIOR ESPECIFICIDADE
+
+:where(.where) a {
+    color: brown;
+}
+
+*/
+        div:has(.has) {
+            background-color: #ccc;
+        }
+        
+        div:has(p) {
+            color: red;
+        }
+
+        :is(section.is) a {
+            color: purple;
+        }
+
+        :where(.where) a {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <label for="mode" aria-hidden="true">
+        <input type="checkbox" name="modo" id="mode">
+        Modo Claro/Escuro
+        <!-- aria-hidden são para coisas que não faz sentido os leitores de tela ler este elemento, para questões de acessibilidade -->
+    </label>
+    <div>
+        <h2>:has()</h2>
+        <section class="has">
+            <p>
+                Conheça nosso site de 
+                <a href="https://serliv.com">Serliv</a>
+            </p>
+        </section>
+    </div>
+    <div>
+        <h2>:is()</h2>
+        <section class="is">
+            <p>
+                Conheça nosso site de 
+                <a href="https://serliv.com">Serliv</a>
+            </p>
+        </section>
+    </div>
+    <div>
+        <h2>:where()</h2>
+        <section class="where">
+            <p>
+                Conheça nosso site de 
+                <a href="https://serliv.com">Serliv</a>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
